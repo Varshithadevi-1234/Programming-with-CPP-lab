@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+class animal {
+public: polymorphism
+ virtual void speak() {
+ cout << "Animal makes a sound." << endl;
+ }
+};
+class dog : public animal {
+public:
+ void speak() override {
+ cout << "Dog barks." << endl;
+ }
+};
+class cat : public animal {
+public:
+void speak() override {
+ cout << "Cat meows." << endl;
+ }
+};
+class cow : public animal {
+public:
+void speak()override {
+cout<< "Cow ammbha." << endl;
+}
+};
+int main() {
+ animal* animalptr;
+ dog d;
+ animalptr=&d;
+ animalptr->speak();
+ cat c;
+ animalptr = &c;
+ animalptr->speak();
+ cow o;
+animalptr=&o;
+ animalptr->speak();
+ animal a;
+ animalptr=&a;
+ animalptr->speak();
+ return 0;
+}
